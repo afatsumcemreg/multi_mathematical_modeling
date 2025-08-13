@@ -555,22 +555,30 @@ with col2:
         ax1 = axes[idx]
         ax2 = ax1.twinx()  # sağ y ekseni
 
+        # Harf etiketi (A, B, C, ...)
+        letter = chr(65 + idx)  # 65 = 'A'
+
         # Sugar (yeşil)
-        ax1.plot(visualization_df["time"], visualization_df["sugar"], color="tab:green", label="Experimental Sugar")
-        ax1.plot(visualization_df["time"], visualization_df[f"{model} - Sugar"], color="tab:green", linestyle="--", alpha=0.7)
+        ax1.plot(visualization_df["time"], visualization_df["sugar"], color="tab:green", label="Exp_Sugar")
+        ax1.plot(visualization_df["time"], visualization_df[f"{model} - Sugar"], color="tab:green", linestyle="--", alpha=0.7, label="Pred_Sugar")
 
         # Product (kırmızı, sağ eksen)
-        ax1.plot(visualization_df["time"], visualization_df["product"], color="tab:red", label="Experimental Product")
-        ax1.plot(visualization_df["time"], visualization_df[f"{model} - Product"], color="tab:red", linestyle="--", alpha=0.7)
+        ax1.plot(visualization_df["time"], visualization_df["product"], color="tab:red", label="Exp_Product")
+        ax1.plot(visualization_df["time"], visualization_df[f"{model} - Product"], color="tab:red", linestyle="--", alpha=0.7, label="Pred_Product")
 
         # Biomass (mavi)
-        ax2.plot(visualization_df["time"], visualization_df["biomass"], color="tab:blue", label="Experimental Biomass")
-        ax2.plot(visualization_df["time"], visualization_df[f"{model} - Biomass"], color="tab:blue", linestyle="--", alpha=0.7)
+        ax2.plot(visualization_df["time"], visualization_df["biomass"], color="tab:blue", label="Exp_Biomass")
+        ax2.plot(visualization_df["time"], visualization_df[f"{model} - Biomass"], color="tab:blue", linestyle="--", alpha=0.7, label="Pred_Product")
 
-        ax1.set_title(model, fontsize=10)
         ax1.set_xlabel("Time")
         ax1.set_ylabel("Product / Sugar")
         ax2.set_ylabel("Biomass")
+        ax1.legend()
+        ax2.legend()
+        ax1.grid(True, linestyle='--', alpha=0.5)
+  
+        # Başlığa harfi ekle
+        ax1.set_title(f"{letter}) {model}")
 
     # Boş kalan subplot'ları kapat
     for j in range(len(valid_models), len(axes)):
