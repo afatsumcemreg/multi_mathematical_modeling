@@ -37,7 +37,7 @@ with st.sidebar.expander(f"**Load Data**"):
     # uploaded_file_2 = st.file_uploader('Upload a Cost File', type=['xlsx', 'csv', 'txt'], key='unique_key_for_file_uploader')
 
     # Upload default datasets
-    df = pd.read_excel(r"datasets\suspended_cells.xlsx") if uploaded_file_1 is None else pd.read_excel(uploaded_file_1)
+    df = pd.read_excel("datasets/suspended_cells.xlsx")
 
 selected_models = st.sidebar.multiselect('**Select models**', sorted(models), default=sorted(models))
 
