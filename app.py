@@ -43,6 +43,62 @@ selected_models = st.sidebar.multiselect('**Select models**', sorted(models), de
 
 # endregion
 
+# region FREQUENTLY USED WORDS
+given_synonyms = random.choice(["specified", "particular", "specific", "designated", "stated", "provided", "given", "fixed", "established", "defined", "supplied", "presented", "offered", "set forth"])
+equations = random.choice(["formulas", "expressions", "mathematical statements", "mathematical equations", "mathematical formulas"])
+represent = random.choice(["represent", "depict", "portray", "illustrate", "express", "render", "manifest", "mirror", "symbolize", "embody", "exhibit"])
+calculated_synonyms = random.choice(["calculated", "computed", "reckoned", "estimated"])
+based_on = random.choice(["based on", "according to", "in accordance with", "as per", "in conformity with", "following", "pursuant to", "in line with", "in light of", "in consideration of", "taking into account", ])
+follows = random.choice(["follows", "follows up", "pursues", "chases", "trails", "traces", "tracks"])
+similar_synonyms = random.choice(["similar", "similary", "homologous", "nearly the same", "comparable", "analogous", "analogic", "alike", "akin", "resembling","almost identical", "equivalent"])
+minimum_synonyms = random.choice(["minimum", "smallest", "lowest", "at least", "minimal", "tiniest"])
+maximum_synonyms = random.choice(["maximum", "highest", "greatest", "utmost", "peak", "supreme", "ultimate", "maximal", "uppermost"])
+values = random.choice(["values", "data", "datum", "observations"])
+steepness = random.choice(["steepness", "slope", "inclination", "gradient", "grade"])
+sigmoidal = random.choice(["sigmoidal", "S-shaped", "curvilinear", "sigmoid"])
+constrain = random.choice(["constrain", "restrict", "limit", "restrain", "curb", "constrict"])
+output = random.choice(["result", "finding", "outcome", "conclusion", "output", "consequence", "accomplishment", "achievement", "observation"])
+describe = random.choice(["characterize", "define", "describe", "depict", "identify", "outline"])
+variables = random.choice(["variables", "factors", "parameters", "elements", "attributes", "features"])
+include = random.choice(["include", "involve", "engage", "participate", "contain", "entail", "incorporate"])
+impact_synonym = random.choice(["impact", "affect", "influence"])
+determining = random.choice(["determining", "ascertaining", "identifying", "detecting", "pinpointing", "finding out", "figuring out"])
+exhibit = random.choice(["exhibit", "display", "show", "present", "demonstrate", "manifest", "reveal", "expose", "feature"])
+significant = random.choice(["significant", "pivotal", "central", "critical", "crucial", "essential", "key", "vital", "fundamental", "important", "paramount"])
+changes_synonyms = random.choice(["changes", "modifications", "alterations", "variations"])
+production_synonyms = random.choice(["production", "manufacturing", "fabrication", "creation", "formation", "generation"])
+consumption_synonyms = random.choice(["consumption", "usage", "utilization", "use", "utilisation"])
+constrained = random.choice(["constrained", "restricted", "limited", "restrained", "curbed", "constricted"])
+influenced = random.choice(["influenced", "affected", "impacted"])
+response_synonym = random.choice(["response", "answer", "reply"])
+controlled = random.choice(["controlled", "regulated", "governed", "managed", "directed", "supervised", "restrained", "checked", "inspected"])
+similarly_synonyms = random.choice(["Similarly", "Likewise", "In the same vein", "In a similar manner", "In like fashion", "Correspondingly", "Equally", "In a parallel fashion", "In a similar way", "In the same way"])
+represents = random.choice(["represents", "depicts", "portrays", "illustrates", "expresses", "renders", "manifests", "mirrors", "symbolizes", "embodies", "exhibits"])
+commonly = random.choice(["generally", "extensively", "widely ", "broadly", "broad-mindedly", "far and wide", "universally", "open-mindedly", "commonly"])
+used = random.choice(["used", "utilized", "employed", "applied", "exploited", "deployed", "exercised", "implemented", "operated", "practiced"])
+various_synonyms = random.choice(["various", "diverse", "assorted", "different", "numerous", "several", "varied", "many", "multifarious", "myriad", "sundry"])
+different_synonyms = random.choice(["different", "various", "diverse", "assorted", "numerous", "several", "varied", "many", "multifarious", "myriad", "sundry"])
+process = random.choice(['method', 'procedure', 'technique', 'operation', 'approach'])
+biomass_production = random.choice(["biomass production", "biomass cultivation", "biomass generation", "biomass synthesis", "biomass formation", "biomass manufacturing", "biomass creation", "biomass growth", "biomass development", "cell growth", "cell development", "cell formation", "cell production", "cell generation"])
+initial = random.choice(["initial", "starting", "first", "commencing", "beginning", "preliminary"])
+specific_synonym = random.choice(["specific", "certain", "particular", "definite", "determinate", "specificial"])
+substrate_consumption = random.choice(["substrate consumption", "substrate utilization", "substrate expenditure", "substrate depletion", "substrate usage", "substrate utilizing", "sugar consumption", "sugar utilization", "sugar expenditure", "sugar depletion", "sugar usage", "sugar utilizing"])
+characterized_synonym = random.choice(["characterized", "defined", "described", "depicted", "identified", "outlined"])
+influencing = random.choice(["influencing", "affecting", "shaping", "effecting", "impacting"])
+vary = random.choice(["vary", "change", "alter", "modify", "shift", "diversify", "switch", "alternate"])
+concentration = random.choice(["concentration", "amount", "level"])
+additionally_synonyms = random.choice(["additionally", "furthermore", "moreover", "in addition", "besides", "also", "likewise", "plus", "extra"])
+substrate_source_ = random.choice(["substrate source", "nutrient source", "feedstock", "substrate", "nutrient supply", "raw material", "nutrient reservoir", "nutrient origin"])
+respective = random.choice(["respective", "individual", "particular", "specific", "corresponding", "separate", "distinct", "appropriate"])
+ensure_synonyms = random.choice(["ensure", "allow", "permit", "enable", "facilitate", "let", "make possible", "consent", "authorize", "authorise", "empower"])
+synonyms_technique = random.choice(["technique", "method", "approach", "strategy", "tactic", "procedure"])
+influences = random.choice(["influences", "affects", "impacts"])
+insights_synonyms = random.choice(["insights", "understandings", "perceptions", "realizations", "comprehensions", "discernments", "interpretations"])
+determine_synonyms = random.choice(["determine", "ascertain", "identify", "detect", "pinpoint", "find out", "figure out"])
+by_using_synonyms = random.choice(["by using", "using", "through the use of", "via", "by means of", "with the help of", "by utilizing", "through", "employing", "with", "utilizing"])
+
+# endregion
+
 # region DATA PREPROCESSING
 
 model_functions = {
@@ -123,7 +179,7 @@ st.set_page_config(
 )
 #endregion
 
-# İki eşit genişlikte kolon oluşturun
+# İki eşit genişlikte kolon oluşturma
 st.title("Multi-Mathematical Modeling of Fermentations Related to Value-Added Products Production")
 
 col1, col2 = st.columns(2)
@@ -143,6 +199,8 @@ with col1:
             \end{align*}
             '''
     )
+
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $T_x$, and $\gamma_x$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $T_p$, and $\gamma_p$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $T_s$, and $\gamma_s$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($\gamma_x$, $\gamma_p$, $\gamma_s$), and the points of inflection ($T_x$, $T_p$, $T_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/j.ijfoodmicro.2011.02.022).""")
 
     st.subheader("Baranyi Model")
     st.latex(r"""
@@ -179,6 +237,8 @@ with col1:
     \right)
     """)
 
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{\min}}$, $X_{{\max}}$, $Q_x$, $\lambda_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{\min}}$, $P_{{\max}}$, $Q_p$, $\lambda_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{\min}}$, $S_{{\max}}$, $Q_s$, $\lambda_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), and the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/0168-1605(94)90157-0).""")
+
     st.subheader("Cone Model")
     st.latex(r'''
             \begin{align*}
@@ -187,6 +247,9 @@ with col1:
             S(t) &= S_{\text{max}} - \frac{{S_{\text{max}} - S_{\text{min}}}}{{1 + \left(\frac{1}{{\lambda_s \cdot t}}\right)^{\sigma_s}}}
             \end{align*}
             ''')
+    
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $\lambda_x$, and $\sigma_x$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $\lambda_p$, and $\sigma_p$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $\lambda_s$, and $\sigma_s$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($\sigma_x$, $\sigma_p$, $\sigma_s$), 
+        and the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/0377-8401(96)00950-9).""")
 
     st.subheader("Fitzhugh Model")
     st.latex(r'''
@@ -196,11 +259,15 @@ with col1:
             S(t) & = S_{\text{max}} - (S_{\text{max}} - S_{\text{min}}) \cdot (1 - \exp(-\lambda_s \cdot t))^{\theta_s} \\
             \end{align*}
             ''')
+    
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $\lambda_x$, and $ϑ_x$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $ϑ_p$, and $ϑ_p$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $ϑ_s$, and $ϑ_s$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions and the points of inflection ($ϑ_x$, $ϑ_p$, $ϑ_s$). The exponents $ϑ_x$, $ϑ_p$, and $ϑ_s$ control the {steepness} of the {sigmoidal.lower()} curves [[Reference]](https://doi.org/10.2527/jas1976.4241036x).""")
 
     st.subheader("Generalized Gompertz Model")
     st.latex(r'X(t) = X_{\text{min}} + (X_{\text{max}} - X_{\text{min}}) \cdot \exp\left(-\exp(Q_x \cdot (I_x - t))\right)')
     st.latex(r'P(t) = P_{\text{min}} + (P_{\text{max}} - P_{\text{min}}) \cdot \exp\left(-\exp(Q_p \cdot (I_p - t))\right)')
     st.latex(r'S(t) = S_{\text{min}} + (S_{\text{max}} - S_{\text{min}}) \cdot \exp\left(-\exp(-Q_s \cdot (I_s - t))\right)')
+
+    st.markdown(f"""The {equations.lower()} {describe} dynamic processes where $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} {variables.lower()} evolving over time $t$. The parameters {include.lower()} the {minimum_synonyms.lower()} $X_{{min}}$, $P_{{min}}$, $S_{{min}}$ and {maximum_synonyms.lower()} $X_{{max}}$, $P_{{max}}$, $S_{{max}}$ {values} of each variable. The coefficients $Q_x$, $Q_p$, and $Q_s$ {impact_synonym.lower()} the rate of change. The terms $I_x$, $I_p$, and $I_s$ are inflection points, {determining.lower()} the time at which the {variables.lower()} {exhibit.lower()} {significant.lower()} {changes_synonyms.lower()} in their rates of {production_synonyms.lower()}, {production_synonyms.lower()}, or {consumption_synonyms.lower()} [[Reference]](https://www.pisces-conservation.com/pdf/growthiihelp.pdf).""")
 
     st.subheader("Generalized Logistic Model")
     st.latex(r'''
@@ -211,6 +278,8 @@ with col1:
     \end{align*}
     ''')
 
+    st.markdown(f"""The {equations.lower()} {represent.lower()} dynamic systems where $X(t)$, $P(t)$, and $S(t)$ are functions of time $t$. $X(t)$ denotes a variable {constrained} between $X_{{min}}$ and $X_{{max}}$, {influenced} by an input $I_x$ with a {sigmoidal.lower()} {response_synonym.lower()} {controlled.lower()} by the parameter $Q_x$. {similarly_synonyms}, $P(t)$ {represents.lower()} another variable {constrained} between $P_{{min}}$ and $P_{{max}}$, {influenced} by an input $I_p$ with a {sigmoidal.lower()} {response_synonym.lower()} {controlled.lower()} by $Q_p$. Lastly, $S(t)$ is a variable {constrained} between $S_{{min}}$ and $S_{{max}}$, {influenced} by an input $I_s$ with a {sigmoidal.lower()} {response_synonym.lower()} {controlled.lower()} by the parameter $Q_s$. These {equations.lower()} model the dynamic behavior of the {variables.lower()} $X$, $P$, and $S$ over time [[Reference]](https://www.pisces-conservation.com/pdf/growthiihelp.pdf).""")
+
     st.subheader("Generalized Richards Model")
     st.latex(r'''
             \begin{align*}
@@ -219,11 +288,15 @@ with col1:
             S(t) & = S_{\text{min}} + \frac{{S_{\text{max}} - S_{\text{min}}}}{{(1 + v_s \exp(Q_s (t - I_s)))^{1 / v_s}}}
             \end{align*}
             ''')
+    
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $Q_x$, $v_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $v_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $Q_s$, $v_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), and the dimensionless shape parameter of the curves ($v_x$, $v_p$, $v_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://www.pisces-conservation.com/pdf/growthiihelp.pdf).""")
 
     st.subheader("Gompertz Model")
     st.latex(r"X(t) = X_{\text{max}} \cdot \exp\left(-\exp(Q_x \cdot (I_x - t))\right)")
     st.latex(r"P(t) = P_{\text{max}} \cdot \exp\left(-\exp(Q_p \cdot (I_p - t))\right)")
     st.latex(r"S(t) = S_{\text{max}} \cdot \exp\left(-\exp(-Q_s \cdot (I_s - t))\right)")
+
+    st.markdown(f"""These {equations.lower()} {describe} a {sigmoidal.lower()} model {commonly.lower()} {used.lower()} in {various_synonyms.lower()} fields, where the functions $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} {different_synonyms.lower()} biological or physical processes over time $t$. The inflection points $I_x$, $I_p$, $I_s$ are the time at the inflection point, and the constants $Q_x$, $Q_p$, $Q_s$ control the rate of {production_synonyms.lower()}, {production_synonyms.lower()}, or {consumption_synonyms.lower()}. The {maximum_synonyms.lower()} {values} $X_{{max}}$, $P_{{max}}$, $S_{{max}}$ {represent.lower()} the upper bounds of each {process} [[Reference]](https://doi.org/10.1098/rstl.1825.0026).""")
 
     st.subheader("Huang Model")
     st.latex(r'''
@@ -236,11 +309,15 @@ with col1:
             S(t) & = S_{\text{min}} + S_{\text{max}} + \log\left(\exp(S_{\text{min}}) + (\exp(S_{\text{max}}) - \exp(S_{\text{min}})) \cdot \exp(-Q_s \cdot h_t)\right) \\
             \end{align*}
             ''')
+    
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{\min}}$, $X_{{\max}}$, $Q_x$, $\lambda_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{\min}}$, $P_{{\max}}$, $Q_p$, $\lambda_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{\min}}$, $S_{{\max}}$, $Q_s$, $\lambda_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), and the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/j.foodcont.2012.11.019).""")
 
     st.subheader("Kinetic Model")
     st.latex(r"X(t) = \frac{{{X_0} \cdot {X_{\max}}}}{{{X_0} + ({X_{\max}} - {X_0}) \cdot \exp(-{\mu} \cdot t)}}")
     st.latex(r"\frac{{dP}}{{dt}} = {P_0} + {a} \cdot X({t}) + {β} \cdot {X_0} \cdot \left(\frac{{{X_{\max}}}}{{\mu}}\right) \cdot \left(e^{{\mu {t}}} - 1\right)")
     st.latex(r"- \frac{dS}{dt} = S_0 - Y_{xs} \cdot (X(t) - X_0) - γ \cdot X(t) - m \cdot X_0 \cdot \left(\frac{X_{\max}}{\mu}\right) \cdot \left(e^{\mu t} - 1\right)")
+
+    st.markdown(f"Where, $X(t)$ {represents.lower()} the {biomass_production.lower()} at time $t$, where $X_0$ is the {initial} {biomass_production.lower()}, and $X_{{\max}}$ is the {maximum_synonyms.lower()} achievable {biomass_production.lower()}. The parameter ${{\mu}}$ denotes the {specific_synonym.lower()} {production_synonyms.lower()} rate. The {production_synonyms.lower()} of product $P$ is {controlled.lower()} by a {different_synonyms.lower()} equation where $P_0$ is the {initial} product {concentration.lower()}, and $a$ and $β$ are the product {production_synonyms.lower()} constants that may {vary.lower()} with the fermentation condition. {additionally_synonyms.capitalize()}, the {substrate_consumption.lower()} $S$ is {characterized_synonym} by another {different_synonyms.lower()} equation, where $S_0$ is the {initial} substrate {concentration.lower()}, $Y_{{xs}}$ is the yield coefficient, ${{\gamma}}$ is a coefficient {influencing} {substrate_consumption.lower()}, and $m$ is the {substrate_source_} {used.lower()} to promote cell maintenance, and $t$ is the time variable in the {equations.lower()} [[Reference](https://doi.org/10.1073/pnas.6.6.275), [Reference](https://doi.org/10.1002/jbmte.390010406), [Reference](https://doi.org/10.1016/0961-9534(95)00092-L)].")
 
     st.subheader("Logistic Model")
     st.latex(r'''
@@ -251,6 +328,8 @@ with col1:
     \end{align*}
     ''')
 
+    st.markdown(f"""The {equations.lower()} {represent.lower()} dynamic processes where $X(t)$, $P(t)$, and $S(t)$ denote the states of {different_synonyms.lower()} {variables.lower()} over time. $X_{{max}}$, $P_{{max}}$, and $S_{{max}}$ are the {maximum_synonyms.lower()} {values} that these {variables.lower()} can attain. $Q_x$, $Q_p$, and $Q_s$ are constants {determining.lower()} the rate of change. $I_x$, $I_p$, and $I_s$ are inflection points or thresholds that {impact_synonym.lower()} the behavior of the {respective} {variables.lower()}. The {sigmoidal.lower()} functions in the denominators {ensure_synonyms.lower()} that the {variables.lower()} {synonyms_technique} their {maximum_synonyms.lower()} {values} asymptotically [[Reference]](https://doi.org/10.1073/pnas.6.6.275).""")
+
     st.subheader("Modified Gompertz Model")
     st.latex(r'''
     \begin{align*}
@@ -260,6 +339,8 @@ with col1:
     \end{align*}
     ''')
 
+    st.markdown(f"""The {equations.lower()} {represent.lower()} dynamic processes over time. In the {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ denote the {values} of {different_synonyms.lower()} {variables.lower()} at time $t$. The parameters $X_{{max}}$, $P_{{max}}$, and $S_{{max}}$ are the {maximum_synonyms.lower()} {values} that $X(t)$, $P(t)$, and $S(t)$ can reach, respectively. The parameters $Q_x$, $Q_p$, and $Q_s$ {impact_synonym.lower()} the {steepness} of the decline in the {variables.lower()}. The parameters $\lambda_x$, $\lambda_p$, and $\lambda_s$ {represent.lower()} time-shifts or delays in the processes. The constant $e$ is the base of the natural logarithm [[Reference]](https://doi.org/10.1128/aem.56.6.1875-1881.1990).""")
+
     st.subheader("Modified Logistic Model")
     st.latex(r'''
     \begin{align*} 
@@ -267,6 +348,8 @@ with col1:
     P(t) = \frac{P_{\text{max}}}{1 + \exp\left(\frac{4 Q_p (\lambda_p - t)}{P_{\text{max}}} + 2\right)} \\
     S(t) = \frac{S_{\text{max}}}{1 + \exp\left(\frac{4 (-Q_s) (\lambda_s - t)}{S_{\text{max}}} + 2\right)}
     \end{align*}''')
+
+    st.markdown(f"""The {equations.lower()} {represent.lower()} {sigmoidal.lower()} functions {commonly.lower()} {used.lower()} in mathematical modeling. In the first equation, $X(t)$ {represents.lower()} the {sigmoidal.lower()} function with parameters $X_{{max}}$, $Q_x$, $\lambda_x$, and $t$. $X_{{max}}$ is the {maximum_synonyms.lower()} value, $Q_x$ {influences} the {steepness} of the curve, $\lambda_x$ is the inflection point, and $t$ is the variable. {similar_synonyms.capitalize()} {insights_synonyms.lower()} apply to the second and third {equations.lower()} for $P(t)$ and $S(t)$ with parameters $P_{{max}}$, $Q_p$, $\lambda_p$, $S_{{max}}$, $Q_s$, and $\lambda_s$ [[Reference]](https://doi.org/10.1128/aem.56.6.1875-1881.1990).""")
 
     st.subheader("Modified Richards Model")
     st.latex(r'''
@@ -277,6 +360,8 @@ with col1:
     \end{align*}
     ''')
 
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $Q_x$, $\lambda_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $\lambda_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $Q_s$, $\lambda_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$), and the dimensionless shape parameter of the curves ($v_x$, $v_p$, $v_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1128/aem.56.6.1875-1881.1990).""")
+
     st.subheader("Morgen-Mercer-Flodin Model")
     st.latex(r'''
     \begin{align*}
@@ -285,6 +370,8 @@ with col1:
     S(t) &= S_{\text{min}} + \frac{{S_{\text{max}} - S_{\text{min}}}}{{1 + (\lambda_s t)^{\gamma_s}}}
     \end{align*}
     ''')
+
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X_{{min}}$, $X_{{max}}$, $P_{{min}}$, $P_{{max}}$, $S_{{min}}$, and $S_{{max}}$ are the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} for the functions. $\lambda_x$, $\lambda_p$, and $\lambda_s$ control the points of inflection. $\gamma_x$, $\gamma_p$, and $\gamma_s$ {determine_synonyms} the {steepness} of the {sigmoidal.lower()} curves. The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1073/pnas.72.11.4327).""")
 
     st.subheader("Re-Modified Gompertz Model")
     st.latex(r'''
@@ -295,6 +382,8 @@ with col1:
     \end{align*}
     ''')
 
+    st.markdown(f"""In the {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions over time. For $X(t)$, it models a {process} {by_using_synonyms.lower()} parameters such as $X_{{min}}$, $X_{{max}}$, $Q_x$, $\lambda_x$, and $t$. {similarly_synonyms}, $P(t)$ and $S(t)$ have {respective}parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $\lambda_p$ and $S_{{min}}$, $S_{{max}}$, $Q_s$, and $\lambda_s$, respectively. These parameters govern the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values}, decay rates, and time-dependent factors of the functions, {influencing} their behavior over time. The constant $e$ is the base of the natural logarithm [[Reference]](https://doi.org/10.1016/j.bcab.2018.03.018).""")
+
     st.subheader("Re-Modified Logistic Model")
     st.latex(r'''
     \begin{align*}
@@ -303,6 +392,8 @@ with col1:
     S(t) & = S_{\text{min}} + \frac{{S_{\text{max}} - S_{\text{min}}}}{{1 + \exp\left(\frac{{4 \cdot Q_s \cdot (t - \lambda_s)}}{{S_{\text{max}}}} + 2\right)}}
     \end{align*}
     ''')
+
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $Q_x$, $\lambda_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $\lambda_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $Q_s$, $\lambda_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), and the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/j.bcab.2018.03.018).""")
 
     st.subheader("Re-Modified Richards Model")
     st.latex(r"""
@@ -313,6 +404,8 @@ with col1:
     \end{align*}
     """)
 
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $Q_x$, $\lambda_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $\lambda_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $Q_s$, $\lambda_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), the points of inflection ($\lambda_x$, $\lambda_p$, $\lambda_s$), and the dimensionless shape parameter of the curves ($v_x$, $v_p$, $v_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/j.bcab.2018.03.018).""")
+
     st.subheader("Richards Model")
     st.latex(r'''
     \begin{align*}
@@ -321,6 +414,8 @@ with col1:
     S(t) = \frac{S_{\text{max}}}{\left(1 + v_s \exp(Q_s (t - I_s))\right)^{\frac{1}{v_s}}}
     \end{align*}
     ''')
+
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $Q_x$, $v_x$, $I_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $Q_p$, $v_p$, $I_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $Q_s$, $v_s$, $I_s$, and $t$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), the dimensionless shape parameter of the curves ($v_x$, $v_p$, $v_s$), and the points of inflection ($I_x$, $I_p$, $I_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {minimum_synonyms.lower()} and {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1093/jxb/10.2.290).""")
 
     st.subheader("Stannard Model")
     st.latex(r"""
@@ -331,6 +426,8 @@ with col1:
     \end{align*}
     """)
 
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{max}}$, $Q_x$, $β_x$, $k_x$, and $t$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{max}}$, $Q_p$, $β_p$, $k_p$, and $t$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{max}}$, $Q_s$, $β_s$, $k_s$, and $t$. These parameters control the {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves ($Q_x$, $Q_p$, $Q_s$), the rate of change ($β_x$, $β_p$, $β_s$), and the points of inflection ($k_x$, $k_p$, $k_s$). The functions {constrain} the {output} {values} between the {given_synonyms} {maximum_synonyms.lower()} limits [[Reference]](https://doi.org/10.1016/S0740-0020(85)80004-6).""")
+
     st.subheader("Weibull Model")
     st.latex(r'''
     \begin{align*}
@@ -339,6 +436,8 @@ with col1:
     S(t) &= S_{\text{min}} + (S_{\text{max}} - S_{\text{min}}) \cdot \exp\left(-\left(\frac{t}{\lambda_s}\right)^{\sigma_s}\right)
     \end{align*}
     ''')
+
+    st.markdown(f"""In the {given_synonyms} {equations.lower()}, $X(t)$, $P(t)$, and $S(t)$ {represent.lower()} functions of time $t$. $X(t)$ is {calculated_synonyms.lower()} {based_on.lower()} the function with parameters $X_{{min}}$, $X_{{max}}$, $\lambda_x$, and $\sigma_x$. $P(t)$ {follows.lower()} a {similar_synonyms.lower()} structure with parameters $P_{{min}}$, $P_{{max}}$, $\lambda_p$, and $\sigma_p$. $S(t)$ is {calculated_synonyms.lower()} with parameters $S_{{min}}$, $S_{{max}}$, $\lambda_s$, and $\sigma_s$. These parameters control the {minimum_synonyms.lower()} and {maximum_synonyms.lower()} {values} of the functions, the {steepness} of the {sigmoidal.lower()} curves, and the points of inflection [[Reference]](https://doi.org/10.1115/1.4010337).""")
 
     #endregion
 
@@ -379,6 +478,7 @@ with col1:
 
     #endregion
 
+with col2:
     #region --- EXPERIMENTAL & MODEL PREDICTION TABLE (MultiIndex) ---
     st.markdown("### Experimental & Model Prediction Table")
     st.markdown("This section provides a table that combines experimental data with model predictions. The table is structured to show time, experimental values, and predictions from each selected model.")
@@ -522,7 +622,6 @@ with col1:
 
     #endregion
 
-with col2:
     #region --- VISUALIZATION OF EXPERIMENTAL AND PREDICTED DATA (MultiIndex) ---
     st.markdown("### Visualization of Experimental and Predicted Data")
     st.markdown("This section provides visualizations of the experimental data and model predictions. Each model's predictions are compared against the experimental data for biomass, product, and sugar.")
@@ -773,8 +872,8 @@ with col2:
 
     def multi_box_plot_visualization(dataframe, columns):
         rows = 3
-        cols = 1  # 2x2 grid
-        fig, axes = plt.subplots(rows, cols, figsize=(10, 15), sharex=True)
+        cols = 1
+        fig, axes = plt.subplots(rows, cols, figsize=(10, 12), sharex=True)
         axes = axes.flatten()  # 2D -> 1D
 
         for i, col in enumerate(columns):
@@ -814,12 +913,12 @@ with col2:
         ]
         box_plot_df = box_plot_df[[c for c in needed_cols if c in box_plot_df.columns]]
         box_plot_df = box_plot_df.rename(columns={
-            'biomass_pred': 'Biomass Prediction',
-            'product_pred': 'Product Prediction',
-            'sugar_pred': 'Sugar Prediction'
+            'biomass_pred': 'A) Biomass Prediction',
+            'product_pred': 'B) Product Prediction',
+            'sugar_pred': 'C) Sugar Prediction'
         })
 
-        fig = multi_box_plot_visualization(box_plot_df, ['Biomass Prediction', 'Product Prediction', 'Sugar Prediction'])
+        fig = multi_box_plot_visualization(box_plot_df, ['A) Biomass Prediction', 'B) Product Prediction', 'C) Sugar Prediction'])
         st.pyplot(fig)
 
     #endregion
