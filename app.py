@@ -30,13 +30,21 @@ models = [
 st.sidebar.title(f"💾 Data 💾")
 
 # Add components to the sidebar
-with st.sidebar.expander(f"**Load Data**"):
+with st.sidebar.expander("**Load Data**"):
     uploaded_file_1 = st.file_uploader('Upload a Data File', type=['xlsx', 'csv', 'txt'])
 
-    # st.subheader(f"**Load Cost Data**")
-    # uploaded_file_2 = st.file_uploader('Upload a Cost File', type=['xlsx', 'csv', 'txt'], key='unique_key_for_file_uploader')
-
-    # Upload default datasets
+# Veri yükleme
+if uploaded_file_1 is not None:
+    file_type = uploaded_file_1.name.split('.')[-1]
+    if file_type == 'csv':
+        df = pd.read_csv(uploaded_file_1)
+    elif file_type == 'xlsx':
+        df = pd.read_excel(uploaded_file_1)
+    elif file_type == 'txt':
+        df = pd.read_csv(uploaded_file_1, delimiter='\t')  # veya uygun delimiter
+    else:
+        st.error("Unsupported file type.")
+else:
     df = pd.read_excel("datasets/suspended_cells.xlsx")
 
 selected_models = st.sidebar.multiselect('**Select models**', sorted(models), default=sorted(models))
